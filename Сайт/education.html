@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Анкета</title>
+  <link rel="stylesheet" href="education.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="header">
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Логотип сайта" class="logo-img">
+      </a>
+      <div class="menu">
+        <a href="education.html">Образование</a>
+        <a href="#">Навыки</a>
+        <a href="#">Кейсы</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-content">
+
+    <div class="page-title">
+      <span class="star">✱</span>
+      <h1>анкета</h1>
+    </div>
+
+    <!-- ФОРМА -->
+    <div id="form-block">
+      <div class="card">
+        <div class="card-header">заполните данные</div>
+        <div class="card-body">
+
+          <div class="field">
+            <input type="text" id="name" placeholder="ФИО" />
+          </div>
+
+          <div class="field">
+            <input type="email" id="email" placeholder="Адрес электронной почты" />
+          </div>
+
+          <div class="field">
+            <input type="tel" id="phone" placeholder="Телефон" />
+          </div>
+
+          <div class="field">
+            <label for="help">С чем помочь?</label>
+            <textarea id="help" placeholder="Опишите запрос..."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="message">Сообщение</label>
+            <textarea id="message" placeholder="Ваше сообщение..."></textarea>
+          </div>
+
+          <div class="field">
+            <label>Как вы узнали обо мне?</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item"><input type="checkbox" value="Telegram" /> Telegram</label>
+              <label class="checkbox-item"><input type="checkbox" value="ВК" /> ВК</label>
+              <label class="checkbox-item"><input type="checkbox" value="HH.ru" /> HH.ru</label>
+              <label class="checkbox-item"><input type="checkbox" value="От знакомых" /> От знакомых</label>
+              <label class="checkbox-item"><input type="checkbox" value="Другое" /> Другое</label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="submit-area">
+        <button class="submit-btn" onclick="handleSubmit()">отправить</button>
+      </div>
+    </div>
+
+    <!-- ЭКРАН БЛАГОДАРНОСТИ -->
+    <div class="thank-you" id="thank-you">
+      <h2>Спасибо! 🎉</h2>
+      <p>Ваши данные получены.<br>Я свяжусь с вами в ближайшее время.</p>
+    </div>
+
+  </div>
+
+  <script>
+    function handleSubmit() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if (!name || !email) {
+        alert('Пожалуйста, заполните ФИО и email.');
+        return;
+      }
+      const sources = [...document.querySelectorAll('.checkbox-group input:checked')].map(el => el.value);
+      console.log({ name, email,
+        phone: document.getElementById('phone').value,
+        help: document.getElementById('help').value,
+        message: document.getElementById('message').value,
+        sources
+      });
+
+      // скрываем форму, показываем благодарность
+      document.getElementById('form-block').style.display = 'none';
+      const ty = document.getElementById('thank-you');
+      ty.style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>
