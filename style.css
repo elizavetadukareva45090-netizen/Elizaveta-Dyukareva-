@@ -45,12 +45,17 @@ p, a, button, label, input, textarea, span,
 
 /* ===== HEADER ===== */
 .header {
-  padding: 16px 0;
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 10;
-}
+  padding: 16px 0;
 
+  background: rgba(243,245,255,0.95);
+  backdrop-filter: blur(10px);
+
+  z-index: 1000;
+}
 .header nav {
   max-width: 1200px;
   margin: 0 auto;
@@ -615,6 +620,90 @@ body {
   margin: 0 0 14px;
   color: #182000;
 }
+/* ========================= */
+/* PROJECT 01 */
+/* ========================= */
+
+.project-01-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+
+  width: 100%;
+  margin-top: 30px;
+}
+
+.project-big img {
+  width: 100%;
+  height: 830px;
+  object-fit: cover;
+
+  border-radius: 28px;
+  display: block;
+}
+
+.project-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-small img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+
+  border-radius: 28px;
+  display: block;
+}
+
+.project-card {
+  background: #b6ffa8;
+  color: #182000;
+  border-radius: 12px;
+  padding: 22px 24px 20px;
+  box-shadow: 8px 8px 0 #6b7cff;
+  align-self: flex-start;
+  width: fit-content;
+  min-width: 220px;
+  max-width: 320px;
+}
+
+.project-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: #182000;
+}
+
+.project-tag {
+  display: inline-block;
+  background: #6b7cff;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.project-link {
+  display: block;
+  color: #182000;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0;
+  border: none;
+  background: transparent;
+  transition: opacity 0.2s;
+}
+
+.project-link:hover {
+  opacity: 0.55;
+  text-decoration: none;
+}
 
 .right .card a {
   display: block;
@@ -831,4 +920,332 @@ body {
   align-self: flex-end !important;
   flex-shrink: 0 !important;
   image-rendering: pixelated !important;
+}
+/* ===== CTA НОВЫЙ ===== */
+.cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-sky {
+  background: #5b6bd6;
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cta-body {
+  background: #1f2747;
+  padding: 60px 20px 80px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+}
+
+.cta-girl {
+  position: absolute;
+  right: 60px;
+  bottom: 0;
+  height: 370px;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cta h2 {
+  font-family: 'Soyuz Grotesk', Arial, sans-serif;
+  font-size: clamp(28px, 4vw, 56px);
+  font-weight: 900;
+  color: #7cf2b5;
+  line-height: 1.1;
+  margin: 0 0 16px;
+  text-shadow: 0 0 30px rgba(124, 242, 181, 0.35);
+  position: relative;
+  z-index: 2;
+}
+
+.cta p {
+  font-family: 'Cygre Medium', Arial, sans-serif;
+  font-size: 15px;
+  color: rgba(255,255,255,0.55);
+  margin: 0 0 32px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+.cta button {
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  padding: 14px 32px;
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255,255,255,0.45);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Cygre Medium', Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.cta button:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.8);
+}
+
+.cta-spark {
+  position: absolute;
+  color: #ffd04b;
+  font-size: 24px;
+  pointer-events: none;
+  z-index: 3;
+  animation: sparkPulse 2s ease-in-out infinite;
+}
+
+@keyframes sparkPulse {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+  50%       { transform: scale(1.35) rotate(15deg); opacity: 1; }
+}
+
+/* ===== ФИНАЛЬНЫЙ OVERRIDE CTA ===== */
+.cta {
+  position: relative;
+  overflow: hidden;
+  background: #1f2747 !important;
+  padding: 0 !important;
+}
+
+.cta-sky { display: none !important; }
+
+.cta-body {
+  background: #1f2747 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 60px 20px 70px !important;
+  position: relative !important;
+  text-align: center !important;
+  min-height: 600px !important;
+}
+
+.cta-girl {
+  position: relative !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: auto !important;
+  height: 340px !important;
+  image-rendering: pixelated !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+  margin-bottom: 8px !important;
+}
+
+.cta-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.cta h2 {
+  font-family: 'Soyuz Grotesk', Arial, sans-serif !important;
+  font-size: clamp(22px, 3.5vw, 48px) !important;
+  font-weight: 900 !important;
+  color: #7cf2b5 !important;
+  line-height: 1.1 !important;
+  margin: 0 !important;
+  text-shadow: 0 0 24px rgba(124, 242, 181, 0.4) !important;
+  z-index: 2 !important;
+}
+
+.cta p {
+  font-size: 15px !important;
+  color: rgba(255,255,255,0.55) !important;
+  margin: 0 !important;
+  line-height: 1.6 !important;
+  z-index: 2 !important;
+}
+
+.cta button {
+  z-index: 2 !important;
+  margin-top: 8px !important;
+  padding: 13px 32px !important;
+  background: #5b6bd6 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  font-family: 'Cygre Medium', Arial, sans-serif !important;
+  font-size: 14px !important;
+  letter-spacing: 0.02em !important;
+  transition: background 0.2s !important;
+}
+
+.cta button:hover {
+  background: #6b7cff !important;
+}
+
+.cta-spark {
+  position: absolute !important;
+  color: #ffd04b !important;
+  pointer-events: none !important;
+  z-index: 3 !important;
+  animation: sparkPulse 2s ease-in-out infinite !important;
+}
+
+/* ===== BTN-MORE ФИНАЛЬНЫЙ ===== */
+.btn-more {
+  display: block !important;
+  padding: 12px 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: #182000 !important;
+  font-family: 'Cygre Medium', Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  text-align: left !important;
+  transition: color 0.2s !important;
+  letter-spacing: 0 !important;
+}
+
+.btn-more:hover {
+  color: rgba(24, 32, 0, 0.5) !important;
+  background: transparent !important;
+}
+
+/* ===== CTA — девочка справа ===== */
+.cta-body {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  padding: 60px 60px 60px 80px !important;
+  min-height: 420px !important;
+  gap: 40px !important;
+  position: relative !important;
+}
+
+.cta-text {
+  flex: 1 !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding-bottom: 0 !important;
+  max-width: 560px !important;
+  padding-right: 0 !important;
+}
+
+.cta h2 {
+  text-align: center !important;
+}
+
+.cta p {
+  text-align: center !important;
+}
+
+.cta-girl {
+  position: absolute !important;
+  right: 60px !important;
+  bottom: 0 !important;
+  height: 380px !important;
+  margin-bottom: 0 !important;
+  flex-shrink: 0 !important;
+  align-self: flex-end !important;
+}
+/* ===== CTA ФИНАЛЬНЫЙ ФИКС ===== */
+.cta-body {
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: flex-end !important;
+  padding: 60px 0 0 0 !important;
+  min-height: 500px !important;
+  gap: 0 !important;
+  position: relative !important;
+}
+
+.cta-text {
+  flex: 1 !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding-bottom: 70px !important;
+  max-width: 600px !important;
+  padding-right: 0 !important;
+  margin-left: 120px !important;
+}
+
+.cta h2 {
+  text-align: center !important;
+  white-space: nowrap !important;
+  font-size: clamp(22px, 3vw, 42px) !important;
+}
+
+.cta p {
+  text-align: center !important;
+}
+
+.cta-girl {
+  position: absolute !important;
+  right: 40px !important;
+  bottom: 0 !important;
+  height: 480px !important;
+  margin-bottom: 0 !important;
+  flex-shrink: 0 !important;
+  align-self: flex-end !important;
+}
+
+/* ===== CTA девочка сдвиг вправо ===== */
+.cta-girl {
+  right: -30px !important;
+}
+
+/* ===== CTA заголовок выше ===== */
+.cta h2 {
+  margin-bottom: 20px !important;
+}
+
+.cta-text {
+  padding-bottom: 100px !important;
+}
+
+
+
+/* ===== БЕГУЩАЯ СТРОКА — СЕКЦИЯ ПРОЕКТОВ ===== */
+.projects-code-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+}
+
+.projects-code-sidebar.visible {
+  opacity: 1;
+}
+
+.projects-code-sidebar-inner {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: rgba(182, 255, 168, 0.15);
+  line-height: 1.7;
+  letter-spacing: 3px;
+  word-break: break-all;
+  padding: 20px 10px;
+  animation: slideDown 20s linear infinite;
 }

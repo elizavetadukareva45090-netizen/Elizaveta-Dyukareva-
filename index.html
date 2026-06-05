@@ -16,225 +16,185 @@
     </a>
 
     <div class="menu">
-      <a href="education.html">Образование</a>
-      <a href="#">Навыки</a>
-      <a href="#">Кейсы</a>
+      <a href="#education">Образование</a>
+      <a href="#skills">Навыки</a>
+      <a href="#cases">Кейсы</a>
     </div>
   </nav>
 </header>
 
 <!-- COVER -->
 <section class="cover">
-
-  <!-- Фоновое фото: замените путь на свою фотографию -->
-<img src="images/fonobloshka.jpeg" alt="" class="cover-bg">
-
-  <!-- Маятник: верёвка + тамагочи качаются вместе -->
+  <img src="images/fonobloshka.jpeg" alt="" class="cover-bg">
   <div class="pendulum-wrap">
     <div class="rope"></div>
     <img src="images/tamagotchi.png" class="pendulum-img" alt="">
   </div>
-
 </section>
 
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-
     <div class="left">
       <div class="logo">✱</div>
-
       <h1>
         <span class="h1-cygre">графический дизайн</span><br>
         <span class="h1-soyuz">для смыслов, которые<br>остаются</span>
       </h1>
-
       <div class="text">
         <p>Не каждому сообщению нужны громкие формы. Иногда достаточно точности, ритма и тишины между элементами.</p>
-
         <p>Я работаю с дизайном как с языком: типографика, композиция и цвет помогают раскрыть главное.</p>
-
         <p>Важна ясность — без лишнего, но с характером. Дизайн не отвлекает, а ведёт. Айдентика, цифра, печать — решения, которые живут дольше трендов.</p>
-
         <p><span class="p-cygre">Я оформляю то, что вы хотите сказать —</span><br><span class="p-soyuz">так, чтобы это услышали.</span></p>
       </div>
     </div>
-
     <div class="right">
       <img src="images/1.png" alt="Фото" class="photo">
-
       <div class="card" id="hero-card">
-          <h3>Дюкарева<br>Елизавета</h3>
-          <a href="#" onclick="toggleCard(event)" class="card-trigger">кликни сюда</a>
-          <div class="card-drawer" id="card-drawer">
-            <div class="card-drawer-inner">
-              <div class="card-info">
-                <p>19 y.o.</p><p>SPB</p>
-              </div>
-              <img src="images/spb.png" alt="SPB" class="card-city-img">
+        <h3>Дюкарева<br>Елизавета</h3>
+        <a href="#" onclick="toggleCard(event)" class="card-trigger">кликни сюда</a>
+        <div class="card-drawer" id="card-drawer">
+          <div class="card-drawer-inner">
+            <div class="card-info">
+              <p>19 y.o.</p><p>SPB</p>
             </div>
+            <img src="images/spb.png" alt="SPB" class="card-city-img">
           </div>
+        </div>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- ОБРАЗОВАНИЕ -->
-<section class="education-image">
+<!-- ОБРАЗОВАНИЕ — якорь -->
+<section class="education-image" id="education">
   <img src="images/education.jpeg" alt="education">
 </section>
 
-<!-- ПРОЕКТЫ -->
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Проекты — Портфолио</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Onest:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="projects.css">
-</head>
-<body>
+<!-- НАВЫКИ — якорь (сразу после образования) -->
+<section class="skills-section" id="skills">
+  <!-- контент навыков добавишь сюда -->
+</section>
 
-<!-- КОД-ФОН СБОКУ -->
+<!-- БЕГУЩАЯ СТРОКА ГЛАВНАЯ -->
+<!-- БЕГУЩАЯ СТРОКА ПРОЕКТЫ -->
+<div class="projects-code-sidebar" aria-hidden="true" id="projects-sidebar">
+  <div class="projects-code-sidebar-inner" id="projects-sidebar-inner"></div>
+</div>
 <div class="code-sidebar" aria-hidden="true">
   <div class="code-sidebar-inner"></div>
 </div>
 
-<!-- КОД СВЕРХУ -->
-<div class="code-topbar" aria-hidden="true">
-  <div class="code-topbar-inner"></div>
-</div>
+<!-- ПРОЕКТЫ — якорь -->
+<section class="projects" id="cases">
 
-<section class="projects">
-
-  <!-- ======== ПРОЕКТ 01 ======== -->
+  <!-- ПРОЕКТ 01 -->
   <div class="project">
-    <div class="project-number">01</div>
+  <div class="project-number">01</div>
 
-    <div class="project-layout">
+  <div class="project-01-layout">
 
-      <div class="media-grid two-col">
-        <div class="media-item">
-          <img src="images/p1.jpg" alt="Проект 01 — фото 1">
-          <div class="media-overlay"></div>
-        </div>
-        <div class="media-item">
-          <img src="images/p2.jpg" alt="Проект 01 — фото 2">
-          <div class="media-overlay"></div>
-        </div>
+    <!-- Большая картинка слева -->
+    <div class="project-big">
+      <img src="images/p1.jpg" alt="">
+    </div>
+
+    <!-- Правая колонка -->
+    <div class="project-right">
+
+      <div class="project-small">
+        <img src="images/p2.jpg" alt="">
       </div>
 
-      <div class="green-card">
-        <div class="card-title">дизайн мерча студии "ярко"</div>
-        <span class="tag">фирменный стиль</span>
-        <a href="projects/project-01.html" class="btn-more">посмотреть проект →</a>
+      <div class="project-card">
+        <h3>дизайн мерча студии “ярко”</h3>
+
+        <span class="project-tag">
+          фирменный стиль
+        </span>
+
+        <a href="projects/project-01.html" class="project-link">
+          посмотреть проект
+        </a>
+
       </div>
 
     </div>
+
   </div>
+</div>
 
   <hr class="divider">
 
-  <!-- ======== ПРОЕКТ 02 — ВИДЕО, КРАСНЫЙ ФОН ======== -->
+  <!-- ПРОЕКТ 02 -->
   <div class="project">
     <div class="project-number">02</div>
-
     <div class="project-red-wrap">
       <div class="media-grid one-col">
         <div class="media-item tall has-video">
-          <!--
-            Замените src на путь к вашему видео.
-            poster — картинка пока видео не загрузилось.
-            Наведите мышь — видео начнёт играть.
-          -->
-          <video
-            src="images/gonka.mp4"
-            poster="images/gonka.mp4"
-            muted
-            loop
-            preload="metadata"
-            onmouseenter="this.play()"
-            onmouseleave="this.pause(); this.currentTime=0"
-          ></video>
+          <video src="images/gonka.mp4" poster="images/gonka.mp4" muted loop preload="metadata"
+            onmouseenter="this.play()" onmouseleave="this.pause(); this.currentTime=0"></video>
           <div class="media-overlay"></div>
           <div class="play-icon">▶</div>
         </div>
       </div>
     </div>
-
     <div class="green-card card-below-red">
       <div class="card-title">эдит на тему "Формула-1"</div>
       <span class="tag">анимация</span>
-      <a href="projects/project-02.html" class="btn-more">посмотреть проект →</a>
+      <a href="projects/project-02.html" class="btn-more">посмотреть проект</a>
     </div>
-
   </div>
 
   <hr class="divider">
 
-  <!-- ======== ПРОЕКТ 03 ======== -->
-<div class="project">
-  <div class="project-number">03</div>
-
-  <div class="project-overlap">
-    <div class="media-grid three-col">
-      <div class="media-item">
-        <img src="images/p4.jpg" alt="">
-        <div class="media-overlay"></div>
+  <!-- ПРОЕКТ 03 -->
+  <div class="project">
+    <div class="project-number">03</div>
+    <div class="project-overlap">
+      <div class="media-grid three-col">
+        <div class="media-item">
+          <img src="images/p4.jpg" alt="">
+          <div class="media-overlay"></div>
+        </div>
+        <div class="media-item">
+          <img src="images/p5.jpg" alt="">
+          <div class="media-overlay"></div>
+        </div>
+        <div class="media-item">
+          <img src="images/p6.jpg" alt="">
+          <div class="media-overlay"></div>
+        </div>
       </div>
-      <div class="media-item">
-        <img src="images/p5.jpg" alt="">
-        <div class="media-overlay"></div>
+      <div class="green-card card-overlap-bottom">
+        <div class="card-title">серия плакатов "Слои"</div>
+        <span class="tag">графический дизайн</span>
+        <a href="projects/project-03.html" class="btn-more">посмотреть проект</a>
       </div>
-      <div class="media-item">
-        <img src="images/p6.jpg" alt="">
-        <div class="media-overlay"></div>
-      </div>
-    </div>
-
-    <div class="green-card card-overlap-bottom">
-      <div class="card-title">серия плакатов "Слои"</div>
-      <span class="tag">графический дизайн</span>
-      <a href="projects/project-03.html" class="btn-more">посмотреть проект →</a>
     </div>
   </div>
 
-</div>
-
-  <!-- ======== ПРОЕКТ 04 ======== -->
+  <!-- ПРОЕКТ 04 -->
   <div class="project">
     <div class="project-number">04</div>
-
     <div class="project-layout">
-
       <div class="media-grid one-col">
         <div class="media-item tall">
           <img src="images/p7.jpg" alt="Проект 04">
           <div class="media-overlay"></div>
         </div>
       </div>
-
       <div class="green-card">
-        <div class="card-title">брендбук тату-салона “Катана”</div>
+        <div class="card-title">брендбук тату-салона "Катана"</div>
         <span class="tag">фирменный стиль</span>
-        <a href="projects/project-04.html" class="btn-more">посмотреть проект →</a>
+        <a href="projects/project-04.html" class="btn-more">посмотреть проект</a>
       </div>
-
     </div>
   </div>
 
 </section>
 
-<script>
-  /* Заполняем код-фон символами — это единственный JS, менять не нужно */
-  const syms = '%&$#@()\\//===---+++???!!!0101%%%&&$$##';
-  let str = '';
-  for (let i = 0; i < 600; i++) str += syms[Math.floor(Math.random() * syms.length)];
-  document.querySelector('.code-sidebar-inner').textContent = str;
-  document.querySelector('.code-topbar-inner').textContent  = str;
-</script>
+
 
 <script>
 function toggleCard(e) {
@@ -248,29 +208,77 @@ function toggleCard(e) {
     drawer.style.maxHeight = '0';
   }
 }
-</script>
-</body>
-</html>
-</section>
 
+/* Бегущая строка символов */
+const syms = '%&$#@()\\//===---+++???!!!0101%%%&&$$##';
+let str = '';
+for (let i = 0; i < 800; i++) str += syms[Math.floor(Math.random() * syms.length)];
+const sidebar = document.querySelector('.code-sidebar-inner');
+if (sidebar) sidebar.textContent = str;
+
+/* Бегущая строка в секции проектов */
+const projSidebar = document.getElementById("projects-sidebar-inner");
+if (projSidebar) projSidebar.textContent = str;
+
+const projectsSection = document.getElementById("cases");
+const projectsSidebarEl = document.getElementById("projects-sidebar");
+const mainSidebarEl = document.querySelector(".code-sidebar");
+
+function onScroll() {
+  if (!projectsSection || !projectsSidebarEl) return;
+  const rect = projectsSection.getBoundingClientRect();
+  const inProjects = rect.top < window.innerHeight && rect.bottom > 0;
+  projectsSidebarEl.classList.toggle("visible", inProjects);
+  if (mainSidebarEl) mainSidebarEl.style.opacity = inProjects ? "0" : "1";
+}
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+
+/* Звёзды в CTA */
+const starsContainer = document.getElementById('cta-stars');
+if (starsContainer) {
+  const starChars = ['★','☆','○','◇','·','*','✦','◦','°','⊹','✧','★'];
+  for (let i = 0; i < 70; i++) {
+    const s = document.createElement('span');
+    s.textContent = starChars[Math.floor(Math.random() * starChars.length)];
+    s.style.cssText = `position:absolute;left:${Math.random()*100}%;top:${Math.random()*100}%;font-size:${7+Math.random()*11}px;color:rgba(255,255,255,${0.3+Math.random()*0.6});animation:twinkle ${2+Math.random()*2}s ease-in-out infinite;animation-delay:${Math.random()*3}s;`;
+    starsContainer.appendChild(s);
+  }
+}
+
+/* Плавный скролл */
+document.querySelectorAll('.menu a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 70;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
 <!-- CTA -->
 <section class="cta">
-  <h2>неограниченное предложение</h2>
-  <button>связаться со мной</button>
-</section>
+  <div class="cta-body">
 
-<script>
-function toggleCard(e) {
-  e.preventDefault();
-  var card = document.getElementById('hero-card');
-  var drawer = document.getElementById('card-drawer');
-  card.classList.toggle('is-open');
-  if (card.classList.contains('is-open')) {
-    drawer.style.maxHeight = drawer.scrollHeight + 'px';
-  } else {
-    drawer.style.maxHeight = '0';
-  }
-}
-</script>
+    <!-- Текст по центру -->
+    <div class="cta-text">
+      <h2>неограниченное предложение</h2>
+      <p>ищете дизайнера для вашей<br>команды или компании?</p>
+      <button onclick="window.location.href='education.html'">давайте сотрудничать!</button>
+    </div>
+
+    <!-- Искры вокруг девочки -->
+    <span class="cta-spark" style="top:12%; right:34%; font-size:26px; animation-delay:0s;">✦</span>
+    <span class="cta-spark" style="top:8%;  right:16%; font-size:18px; animation-delay:0.6s;">✦</span>
+    <span class="cta-spark" style="top:38%; right:12%; font-size:20px; animation-delay:1.1s;">✦</span>
+    <span class="cta-spark" style="top:22%; right:26%; font-size:14px; animation-delay:1.5s;">✦</span>
+
+    <!-- Девочка справа -->
+    <img src="images/я2.png" alt="" class="cta-girl">
+
+  </div>
+</section>
 </body>
 </html>
